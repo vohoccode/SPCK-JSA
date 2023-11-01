@@ -272,3 +272,25 @@ footer {
 .footer-about h6 {
     margin-bottom: 30px;
 }
+
+.modal-title{
+    margin-left: 200px;
+    color: white !important;
+    font-size: x-large;
+    font-family: 'Berkshire Swash', serif;
+
+}
+.modal-header{
+    background-color: #C70201;
+}
+.btn-signin_modal {
+    background-color: #C70201;
+    border-color: rgb(199, 2, 1);
+    color: white;
+}
+.btn-signin_modal:hover{
+    background: rgba(199, 2, 1, 0.5);
+    color: white;
+    border-color: rgba(199, 2, 1, 0.5);
+    
+}
