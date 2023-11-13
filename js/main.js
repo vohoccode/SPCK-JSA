@@ -237,7 +237,7 @@ document.getElementById("shopNav").addEventListener("click", async function () {
     document.getElementById("giftOuter").insertAdjacentHTML(
       "beforeend",
       `
-    <div class="gift-card" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+    <div class="gift-card" data-aos="zoom-in" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
             <img src="${product[i].image}" alt="" class="gift-img">
             <h6 class="gift-name">${product[i].name}</h6>
             <p class="gift-price">${product[i].price}$</p>
