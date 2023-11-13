@@ -275,26 +275,28 @@ footer {
     margin-bottom: 30px;
 }
 
-.modal-title{
-    margin-left: 150px;
+.modal-title {
     color: white !important;
     font-size: x-large;
     font-family: 'Berkshire Swash', serif;
 
 }
-.modal-header{
+
+.modal-header {
     background-color: #C70201;
 }
+
 .btn-signin_modal {
     background-color: #C70201;
     border-color: rgb(199, 2, 1);
     color: white;
 }
-.btn-signin_modal:hover{
+
+.btn-signin_modal:hover {
     background: rgba(199, 2, 1, 0.5);
     color: white;
     border-color: rgba(199, 2, 1, 0.5);
-    
+
 }
 
 .shop-outer {
@@ -302,17 +304,21 @@ footer {
     padding: 30px 30px;
     text-align: center;
 }
+
 .shop-outer h1 {
     color: #C70201;
     margin: 30px 0;
-    font-family: 'Berkshire Swash', serif;;
+    font-family: 'Berkshire Swash', serif;
+    ;
 }
+
 .gift-outer {
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
     justify-content: center;
 }
+
 .gift-card {
     width: 300px;
     background: #FFF;
@@ -320,40 +326,49 @@ footer {
     border-radius: 15px;
     transition: transform 0.5s;
 }
+
 .gift-card:hover {
     cursor: pointer;
     transform: translateY(-3px);
 }
-.gift-card img{
+
+.gift-card img {
     width: 200px;
+    height: 200px;
     margin-bottom: 20px;
 }
+
 .gift-name {
     font-size: 22px;
     font-weight: bolder;
     margin-bottom: 15px;
 }
+
 .gift-price {
     margin-bottom: 0px;
     font-size: 20px;
     font-weight: bold;
     color: #C70201;
 }
+
 .gift-search {
     text-align: right;
     margin: 30px;
 }
+
 .gift-search input {
     width: 300px;
     padding: 10px 15px;
     border-radius: 10px;
     border: 1px #999 solid;
 }
+
 .instock-outer {
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 .stock-icon {
     display: inline-block;
     background-color: green;
@@ -361,4 +376,51 @@ footer {
     height: 10px;
     border-radius: 50%;
     margin-right: 8px;
+}
+
+.gift-name_info {
+    color: #C70201;
+    font-family: 'Berkshire Swash', serif;
+    font-size: 30px;
+}
+
+.gift-price_info {
+    font-size: 20px;
+    margin: 15px 0;
+}
+
+.gift-price_info span {
+    font-weight: bolder;
+}
+
+.gift-des_info {
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+.gift-des_info span {
+    font-weight: bolder;
+}
+
+.btn-buy {
+    display: inline-block;
+    padding: 12px 20px;
+    color: #C70201;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .5s;
+    letter-spacing: 4px;
+    border-radius: 5px;
+}
+
+.btn-buy:hover {
+    background: #C70201;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #C70201,
+        0 0 5px #C70201,
+        0 0 5px #C70201,
+        0 0 5px #C70201;
 }
