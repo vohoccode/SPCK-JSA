@@ -237,6 +237,8 @@ footer {
     justify-content: space-between;
     background: #C70201;
     position: relative;
+    bottom: 0;
+    right: 0;
 }
 
 .footer-title {
@@ -274,7 +276,7 @@ footer {
 }
 
 .modal-title{
-    margin-left: 200px;
+    margin-left: 150px;
     color: white !important;
     font-size: x-large;
     font-family: 'Berkshire Swash', serif;
@@ -293,4 +295,70 @@ footer {
     color: white;
     border-color: rgba(199, 2, 1, 0.5);
     
+}
+
+.shop-outer {
+    margin-top: 70px;
+    padding: 30px 30px;
+    text-align: center;
+}
+.shop-outer h1 {
+    color: #C70201;
+    margin: 30px 0;
+    font-family: 'Berkshire Swash', serif;;
+}
+.gift-outer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+.gift-card {
+    width: 300px;
+    background: #FFF;
+    padding: 30px;
+    border-radius: 15px;
+    transition: transform 0.5s;
+}
+.gift-card:hover {
+    cursor: pointer;
+    transform: translateY(-3px);
+}
+.gift-card img{
+    width: 200px;
+    margin-bottom: 20px;
+}
+.gift-name {
+    font-size: 22px;
+    font-weight: bolder;
+    margin-bottom: 15px;
+}
+.gift-price {
+    margin-bottom: 0px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #C70201;
+}
+.gift-search {
+    text-align: right;
+    margin: 30px;
+}
+.gift-search input {
+    width: 300px;
+    padding: 10px 15px;
+    border-radius: 10px;
+    border: 1px #999 solid;
+}
+.instock-outer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.stock-icon {
+    display: inline-block;
+    background-color: green;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 8px;
 }
