@@ -219,7 +219,9 @@ var shopHTLM = `
 <div class="shop-outer">
       <h1>It's Shopping Time!</h1>
       <div class="gift-search">
-        <input type="text" placeholder="Search here...">
+        <a class="btnCart" href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+
+        <input id="searchInput" type="text" placeholder="Search here...">
       </div>
       <div id="giftOuter" class="gift-outer">
         
@@ -239,7 +241,7 @@ document.getElementById("shopNav").addEventListener("click", async function () {
       `
     <div class="gift-card" data-aos="zoom-in" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
             <img src="${product[i].image}" alt="" class="gift-img">
-            <h6 class="gift-name">${product[i].name}</h6>
+            <h6 class="gift-name">${product[i].name.toUpperCase()}</h6>
             <p class="gift-price">${product[i].price}$</p>
             <div class="instock-outer">
               <span class="stock-icon"></span>
@@ -249,96 +251,57 @@ document.getElementById("shopNav").addEventListener("click", async function () {
     `
     );
   }
+  searchGift()
+  clickProduct()
 });
 document.getElementById("homeNav").addEventListener("click", function () {
   renderHome();
 });
+
 function renderHome() {
   mainContainer.innerHTML = "";
   mainContainer.insertAdjacentHTML("beforeend", homeHTML);
 }
+
 window.onload = () => {
   renderHome()
 }
 
-{/* <div class="shop-outer">
-        <h1>It's Shopping Time!</h1>
-        <div class="gift-search">
-          <input type="text" placeholder="Search here...">
-        </div>
-        <div class="gift-outer">
-          <div class="gift-card" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-            <img src="https://www.thechristmasshop.co.uk/storage/images/image?remote=https%3A%2F%2Fwww.thechristmasshop.co.uk%2FWebRoot%2FepagesUK%2FShops%2FBT4873%2F5501%2F744E%2F9B1A%2FC79F%2F5992%2F0A0C%2F05E7%2F2250%2FST33.jpg&shop=bt4873&width=720&height=2560" alt="" class="gift-img">
-            <h6 class="gift-name">Keep Calm Stocking</h6>
-            <p class="gift-price">3.99$</p>
-            <div class="instock-outer">
-              <span class="stock-icon"></span>
-              <span>In stock</span>
-            </div>
-          </div>
-          <div class="gift-card">
-            <img src="https://www.thechristmasshop.co.uk/storage/images/image?remote=https%3A%2F%2Fwww.thechristmasshop.co.uk%2FWebRoot%2FepagesUK%2FShops%2FBT4873%2F5501%2F744E%2F9B1A%2FC79F%2F5992%2F0A0C%2F05E7%2F2250%2FST33.jpg&shop=bt4873&width=720&height=2560" alt="" class="gift-img">
-            <h6 class="gift-name">Keep Calm Stocking</h6>
-            <p class="gift-price">3.99$</p>
-            <div class="instock-outer">
-              <span class="stock-icon"></span>
-              <span>In stock</span>
-            </div>
-          </div>
-          <div class="gift-card">
-            <img src="https://www.thechristmasshop.co.uk/storage/images/image?remote=https%3A%2F%2Fwww.thechristmasshop.co.uk%2FWebRoot%2FepagesUK%2FShops%2FBT4873%2F5501%2F744E%2F9B1A%2FC79F%2F5992%2F0A0C%2F05E7%2F2250%2FST33.jpg&shop=bt4873&width=720&height=2560" alt="" class="gift-img">
-            <h6 class="gift-name">Keep Calm Stocking</h6>
-            <p class="gift-price">3.99$</p>
-            <div class="instock-outer">
-              <span class="stock-icon"></span>
-              <span>In stock</span>
-            </div>
-          </div>
-          <div class="gift-card">
-            <img src="https://www.thechristmasshop.co.uk/storage/images/image?remote=https%3A%2F%2Fwww.thechristmasshop.co.uk%2FWebRoot%2FepagesUK%2FShops%2FBT4873%2F5501%2F744E%2F9B1A%2FC79F%2F5992%2F0A0C%2F05E7%2F2250%2FST33.jpg&shop=bt4873&width=720&height=2560" alt="" class="gift-img">
-            <h6 class="gift-name">Keep Calm Stocking</h6>
-            <p class="gift-price">3.99$</p>
-            <div class="instock-outer">
-              <span class="stock-icon"></span>
-              <span>In stock</span>
-            </div>
-          </div>
-          <div class="gift-outer">
-            <div class="gift-card">
-              <img src="https://www.thechristmasshop.co.uk/storage/images/image?remote=https%3A%2F%2Fwww.thechristmasshop.co.uk%2FWebRoot%2FepagesUK%2FShops%2FBT4873%2F5501%2F744E%2F9B1A%2FC79F%2F5992%2F0A0C%2F05E7%2F2250%2FST33.jpg&shop=bt4873&width=720&height=2560" alt="" class="gift-img">
-              <h6 class="gift-name">Keep Calm Stocking</h6>
-              <p class="gift-price">3.99$</p>
-              <div class="instock-outer">
-                <span class="stock-icon"></span>
-                <span>In stock</span>
-              </div>
-            </div>
-            <div class="gift-card">
-              <img src="https://www.thechristmasshop.co.uk/storage/images/image?remote=https%3A%2F%2Fwww.thechristmasshop.co.uk%2FWebRoot%2FepagesUK%2FShops%2FBT4873%2F5501%2F744E%2F9B1A%2FC79F%2F5992%2F0A0C%2F05E7%2F2250%2FST33.jpg&shop=bt4873&width=720&height=2560" alt="" class="gift-img">
-              <h6 class="gift-name">Keep Calm Stocking</h6>
-              <p class="gift-price">3.99$</p>
-              <div class="instock-outer">
-                <span class="stock-icon"></span>
-                <span>In stock</span>
-              </div>
-            </div>
-            <div class="gift-card">
-              <img src="https://www.thechristmasshop.co.uk/storage/images/image?remote=https%3A%2F%2Fwww.thechristmasshop.co.uk%2FWebRoot%2FepagesUK%2FShops%2FBT4873%2F5501%2F744E%2F9B1A%2FC79F%2F5992%2F0A0C%2F05E7%2F2250%2FST33.jpg&shop=bt4873&width=720&height=2560" alt="" class="gift-img">
-              <h6 class="gift-name">Keep Calm Stocking</h6>
-              <p class="gift-price">3.99$</p>
-              <div class="instock-outer">
-                <span class="stock-icon"></span>
-                <span>In stock</span>
-              </div>
-            </div>
-            <div class="gift-card">
-              <img src="https://www.thechristmasshop.co.uk/storage/images/image?remote=https%3A%2F%2Fwww.thechristmasshop.co.uk%2FWebRoot%2FepagesUK%2FShops%2FBT4873%2F5501%2F744E%2F9B1A%2FC79F%2F5992%2F0A0C%2F05E7%2F2250%2FST33.jpg&shop=bt4873&width=720&height=2560" alt="" class="gift-img">
-              <h6 class="gift-name">Keep Calm Stocking</h6>
-              <p class="gift-price">3.99$</p>
-              <div class="instock-outer">
-                <span class="stock-icon"></span>
-                <span>In stock</span>
-              </div>
-            </div>
-        </div>
-      </div> */}
+function clickProduct() {
+  const listProducts = document.querySelectorAll(".gift-card")
+  listProducts.forEach((item, index) => {
+    item.addEventListener('click', () => {
+        document.getElementById('giftImg').src = product[index].image
+        document.getElementById('giftName').innerHTML = product[index].name
+        document.getElementById('giftPrice').innerHTML = product[index].price + "$"
+        document.getElementById('giftDes').innerHTML = product[index].des
+        document.getElementById('btnAdd').onclick = () => {
+          addToCart(index)
+        }
+    })
+  })
+}
+
+function searchGift() {
+  document.getElementById("searchInput").addEventListener("change", (e) => {
+    let searchInput = e.target.value.toUpperCase()
+    const card = document.querySelectorAll(".gift-card")
+    let giftName = document.querySelectorAll(".gift-name")
+    let prices = document.querySelectorAll('h6')
+
+    giftName.forEach((items, index) => {
+        if (items.innerText.includes(searchInput)){
+            card[index].classList.remove("hide")
+        } else{
+            card[index].classList.add("hide")
+        }
+    })
+})
+}
+
+function addToCart(index) {
+  const listCart = JSON.parse(localStorage.getItem("cart")) || []
+  listCart.push(product[index])
+  localStorage.setItem("cart", JSON.stringify(listCart))
+  alert("Add To Cart Successfully!")
+}
