@@ -189,13 +189,13 @@ var homeHTML = `
     </div>
     <div class="ticket-input_item ticket-phone_outer">
       <label>Phone Number</label>
-      <input type="text" placeholder="Your phone number">
+      <input type="number" placeholder="Your phone number">
     </div>
     <div class="ticket-input_item ticket-email_outer">
       <label>Email Address</label>
       <input type="text" placeholder="Your email address">
     </div>
-    <button class="ticket-btn">Register Now!</button>
+    <button class="ticket-btn" onclick="alertRegister()">Register Now!</button>
   </div>
   <div class="ticket-countdown">
     <div class="countdown-title">
@@ -304,4 +304,8 @@ function addToCart(index) {
   listCart.push(product[index])
   localStorage.setItem("cart", JSON.stringify(listCart))
   alert("Add To Cart Successfully!")
+}
+function alertRegister() {
+  alert("Thank you for your registration!")
+  window.location.reload()
 }

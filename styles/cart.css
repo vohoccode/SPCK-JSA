@@ -1,4 +1,7 @@
 
+.main-container {
+    min-height: 500px !important;
+}
 .btnDeleteAll {
     padding: 15px 20px;
     background: rgb(247, 161, 161);
@@ -39,5 +42,6 @@
     justify-content: center;
 }
 footer {
+    
     margin-top: 20px;
 }
